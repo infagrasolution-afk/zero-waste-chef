@@ -1,0 +1,15 @@
+# Frontend (Node)
+zero-waste-frontend/node_modules/
+zero-waste-frontend/dist/
+zero-waste-frontend/.DS_Store
+zero-waste-frontend/*.local
+
+# Backend (Python)
+zero-waste-backend/venv/
+zero-waste-backend/__pycache__/
+zero-waste-backend/.pytest_cache/
+zero-waste-backend/*.pyc
+
+# IMPORTANT: Nunca subir archivos con claves API
+zero-waste-backend/.env
+.env
