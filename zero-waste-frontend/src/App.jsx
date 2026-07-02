@@ -59,7 +59,8 @@ function App() {
     
     try {
       const payload = { ingredients: ingredients.map(i => ({ name: i })) };
-      const response = await axios.post('http://localhost:8000/api/generate-recipe', payload);
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const response = await axios.post(`${API_URL}/api/generate-recipe`, payload);
       setRecipe(response.data);
     } catch (err) {
       console.error(err);
