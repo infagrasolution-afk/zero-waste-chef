@@ -256,9 +256,24 @@ function App() {
                           <Typography variant="subtitle1" color="secondary.main" fontWeight="bold" mb={1}>
                             Tip del Chef: Quedaría aún mejor si tuvieras...
                           </Typography>
-                          <Box display="flex" flexWrap="wrap" gap={1}>
+                          <Box display="flex" flexDirection="column" gap={1.5} mt={2}>
                             {recipe.missing_ingredients.map((miss, i) => (
-                              <Chip key={i} label={miss} size="small" sx={{ bgcolor: 'rgba(245, 158, 11, 0.15)', color: '#f59e0b', fontWeight: 600 }} />
+                              <Box 
+                                key={i} 
+                                sx={{ 
+                                  display: 'flex', 
+                                  alignItems: 'flex-start',
+                                  bgcolor: 'rgba(245, 158, 11, 0.1)', 
+                                  p: 1.5, 
+                                  borderRadius: 2,
+                                  border: '1px solid rgba(245, 158, 11, 0.2)'
+                                }}
+                              >
+                                <Sparkles size={18} color="#f59e0b" style={{ marginRight: 10, marginTop: 2, flexShrink: 0 }} />
+                                <Typography variant="body2" sx={{ color: '#fbbf24', lineHeight: 1.5, fontWeight: 500, textAlign: 'left' }}>
+                                  {miss}
+                                </Typography>
+                              </Box>
                             ))}
                           </Box>
                         </MotionBox>
